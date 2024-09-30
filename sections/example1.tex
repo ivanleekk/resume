@@ -1,0 +1,126 @@
+\section{Example 1, title}
+Banks are financial intermidiaries that bring suppliers and demanders of funds
+together
+
+\subsection{Interest Rate Risk}
+Banks are exposed to interest rate risk as they borrow short and lend long with different maturities.
+
+Net Interest Income (NII) = Interest Income (Loans etc.) - Interest Expense (Deposts etc.)
+
+Interest Rate Risk can be measured with Gap and Duration Gap
+
+For a given horizon, Gap = Rate Sensitive Assets - Rate Sensitive Liabilities, where rate sensitive means it is due for repricing
+
+With a positive Gap, banks benefit from rising interest rates, but suffer from falling interest rates and vice versa
+
+Duration is a discounted cash flow weighted average  of time to maturity, and can be used to measure interest rate sensitivity
+
+Duration (D) = $\frac{\sum^{T}_{t=1}{[t \times PVCF_t]}}{\sum^{T}_{t=1}{[PVCF_t]}}$
+
+Modified Duration (ModD) = $\frac{Duration (D)}{1 + i_0}$, where $i_0$ is the discount rate
+
+Percentage Change in Price = -ModD $\times \Delta i$
+
+Dollar Change in Price = -ModD $\times \Delta i \times P_0$, where $P_0$ is the initial price
+
+Duration Gap $(D_{Gap}) = D_{Assets} - \frac{MV_{Liabilities}}{MV_{Assets}} \times D_{Liabilities}$
+
+Change in Market Value of Bank $(\Delta MV_{Bank}) = -D_{Gap} \times \frac{\Delta i}{1 + i_0} \times MV_{Assets}$
+
+Percentage Change in Market Value of Bank $\%\Delta MV_{Net Worth} = \frac{\Delta MV_{Bank}}{MV_{Assets}} = -D_{Gap} \times \frac{\Delta i}{1 + i_0}$
+
+Having zero duration gap means that the bank is immunised from shifts in interest rate, however there is stil risk as depositers may want to 
+withdraw their funds, or borrowers may prepay their loans etc.
+
+Basis Risk is the risk that the interest rates on assets and liabilities do not move together
+
+Embedded Option Risk is the risk that the bank's assets or liabilities have options that can be exercised by the counterparty, such as early withdrawal, prepayment etc.
+
+\subsection{Risk Management}
+Balance Sheet Strategies for managing risk include gap and duration
+gap analysis, trying to get them as close to zero as possible
+
+Off-Balance Sheet Strategies include Interest Rate Futures, Interest Rate Swaps, and Interest Rate Options
+
+Swaps for transaction hedge is between two parties, one who wants a fixed (swap rate) and another that wants a floating rate (SORA/SOFR).
+In the specified timeframe, interest payments are exchanged, but no principal is swapped.
+
+Swaps for balance sheet hedge is between two parties, one who wants a fixed (swap rate) and another that wants a floating rate (SORA/SOFR).
+The difference is that the interest payments are only exchanged at a fixed date or specified dates
+
+SOFR is the Secured Overnight Financing Rate, which is the rate at which banks lend to each other overnight, and is the replacement for LIBOR.
+Calculated as the volume-weighted median of transaction-level data from the previous day
+
+SOFR Futures are traded on the CME, and are used to hedge against interest rate risk using the IMM Price
+$IMM Price = 100 - R$, where $R$ is the SOFR rate per annum
+
+3-Month SOFR Futures (SR3) have a notional value of \$1 million, and each percentage point change in IMM point is equivilent to \$2,500. Note that even though the contract is for 3 months, the value of R is still calculated \textbf{per annum}
+
+Problems with hedging with futures is that the hedge may not be perfect, as the futures may not be the same as the underlying asset, and may not move in the same direction or same magnitude
+
+Asset Liability Management (ALM) is the process of managing the bank's balance sheet to maximise net interest income, while minimising interest rate risk
+
+Asset and Liability Management Committee (ALCO) is a senior management committee that is responsible for managing the bank's balance sheet, and is responsible for setting the bank's risk tolerance, and ensuring that the bank's risk profile is consistent with its strategic objectives
+
+\subsection{Liquidity Risk}
+Liquidity Risk is the risk that banks do not have sufficient liquidity to meet obligations such as withdrawals
+
+Partially the reason for a minimum reserve requirement in banks
+
+Sources of liquidity include selling securities, borrowing from the central bank, borrowing from other banks
+
+Liquidity is needed for short-term requirements (withdrawals), seasonal requirements (CNY in SG) or structural changes in liquidity requirements
+
+Types of liquidity regulations include Minimum Cash Balance (MCB),
+Minimum Liquid Assets (MLA), Liquidity Coverage Ratio (LCR), Net Stable Funding Ratio (NSFR)
+
+Since liquidity is valuable, banks need to price for it correctly, and can be done using a liquidity premium tables or other ways to calculate the cost of liquidity when giving it up
+
+Funds Transfer pricing is the process of allocating the cost of liquidity to the business units (departments) that are using it
+
+\subsection{Other Risk}
+Default Risk is the risk that the borrower will not be able to repay the loan, measured
+with the Probability of Default (PD), Loss Given Default (LGD), Exposure at Default (EAD)
+
+Forex Risk is the risk due to fluctuations in exchange rates, and can be hedged with forwards, futures, swaps, and options
+
+Trading or Market Risk is the risk due to trading activities, and can be measured with Value at Risk (VaR), Earnings at Risk (EaR), Economic Value of Equity (EVE) etc.
+
+\subsection{Central Banks}
+Independent institutions that are responsible for monetary policy, and are responsible for controlling inflation, and maintaining price stability
+
+\begin{callout}
+    In SG, the Monetary Authority of Singapore (MAS) is the central bank, but it is not independent from the government
+\end{callout}
+
+Functions of a Central Bank
+\begin{itemize}
+    \item Issuing Currency
+    \item Implementing Monetary Policy
+    \item Controlling Money supply
+    \item Acting as a Lender of Last Resort
+    \item setting official interest rates
+    \item Supervising the banking system
+    \item Managing the country's foreign exchange reserves and exchange rates
+\end{itemize}
+
+Monetary Policy is the process of controlling the money supply and interest rates to achieve macroeconomic objectives such as controlling inflation, consumption, investment, and economic growth
+
+Instruments of Monetary Policy include Open Market Operations, Reserve Requirements, Interest Rate Policy, Interest on Reserves (Interest on Fed Funds) and Overnight Reverse Repurchase Agreements (Fed borrows funds from financial institutions, to offer them fed fund rates)
+
+\subsection{Basel Regulation}
+Basel 1, set capital requirements for banks, and was based on credit risk, 2 tier capital system, and 8\% capital adequacy ratio, but 
+risk weights were too OECD focused
+
+Basel 2 more specific to individual member countries, and had 3 pillars, minimum capital requirements, supervisory review, and market discipline
+
+$\frac{Total Capital}{Risk Weighted Assets} = \frac{Total Capital}{Credit Risk + 12.5 \times (Market Risk + Operational Risk) \geq 8\%}$
+
+Allows for Internal Rating Based Approach, which lets banks use their own models to calculate risk weights
+
+Operational Risk is the risk of loss due to inadequate or failed internal processes, people, systems, or external events
+
+Basel 3 increased the capital requirements, and introduced a leverage ratio, liquidity requirements, and counter-cyclical capital buffer
+
+Basel 3 also introduced Systemically Important Banks (G-SIB)
+

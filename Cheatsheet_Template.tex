@@ -1,0 +1,47 @@
+\documentclass[landscape,a4paper]{article}
+\usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{parskip} 
+\usetikzlibrary{shapes,positioning,arrows,fit,calc,graphs,graphs.standard}
+% \usepackage[nosf]{kpfonts}
+% \usepackage[t1]{sourcesanspro}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage[top=5mm,bottom=5mm,left=5mm,right=5mm]{geometry}
+\usepackage[framemethod=tikz]{mdframed}
+% \usepackage{microtype}
+\usepackage{pdfpages}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\newtcolorbox{callout}[1][]{breakable,sharp corners, skin=enhancedmiddle jigsaw,parbox=false,
+boxrule=0mm,leftrule=1mm,boxsep=0mm,arc=0mm,outer arc=0mm}
+
+% Add these lines to create and style the column separators
+\setlength{\columnseprule}{0.4pt} % Width of the rule
+\setlength{\columnsep}{20pt} % Space between columns
+
+\renewcommand{\baselinestretch}{0.5} % line spacing
+\parskip=0.25pt % paragraph spacing
+% \setlength\extrarowheight{5pt} % table row height
+\renewcommand{\arraystretch}{1.5}
+% \centering
+% \titleformat*{\section}{\normalsize\bfseries}
+% \titleformat*{\subsection}{\small\bfseries}
+
+\begin{document}
+%\footnotesize
+% \scriptsize % 7pt
+\tiny % 5pt
+% \setlength{\parindent}{0pt}
+\begin{multicols*}{3}
+    \input{sections/example1}
+    \input{sections/example2}
+\end{multicols*}
+
+
+\end{document}
